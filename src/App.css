@@ -1,0 +1,181 @@
+/* ========== GLOBAL STYLES ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./assets/bg.jpg") no-repeat center center/cover;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* ========== DARK MODE ========== */
+body.dark {
+  background: url("./assets/bg.jpg") no-repeat center center/cover;
+  color: white;
+}
+
+/* ========== APP CONTAINER ========== */
+.app {
+  width: 450px;
+  min-height: 550px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+/* ========== DARK MODE APP ========== */
+body.dark .app {
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+}
+
+/* ========== HEADER ========== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.8rem;
+}
+
+header button {
+  padding: 6px 15px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+header button:hover {
+  background: #333;
+}
+
+/* ========== INPUT STYLES ========== */
+.note-input input,
+.note-input textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  color: #000;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+body.dark .note-input input,
+body.dark .note-input textarea {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.note-input textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+/* ========== ADD BUTTON ========== */
+.note-input button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.note-input button:hover {
+  background-color: #0056b3;
+}
+
+/* ========== SEARCH BAR ========== */
+.search-bar {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  padding: 5px;
+  backdrop-filter: blur(8px);
+  margin-bottom: 15px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #000;
+  font-size: 14px;
+}
+
+body.dark .search-bar {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .search-bar input {
+  color: white;
+}
+
+/* ========== NOTES CONTAINER ========== */
+.notes-container {
+  margin-top: 10px;
+}
+
+.note-card {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.note-card:hover {
+  transform: scale(1.03);
+}
+
+body.dark .note-card {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* ========== TAGS ========== */
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 5px 5px 0 0;
+  border-radius: 6px;
+  background: rgba(0, 123, 255, 0.2);
+  font-size: 12px;
+  color: #007bff;
+}
